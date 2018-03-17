@@ -5,6 +5,7 @@
     "version" : "1.0", 
     "offline_enabled": false,
     "browser_action": { "default_icon": "img/Icon16.png"},
+    "background": { "scripts": ["background.js"] },
     "icons": {
       "128": "img/Icon128.png",
       "16": "img/Icon16.png",
