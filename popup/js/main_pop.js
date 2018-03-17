@@ -101,7 +101,14 @@ month.addEventListener ('click', function () {
   month.classList.add('chosen');  
 });
 
-/* Handlebars */
+
+/* Retrieving Data */
+
+function Normalize (data) {
+  
+}
+
+/* Handlebars / Changing Table */
 
 $(function () {
   var tmp   = $('#table-tmp');
