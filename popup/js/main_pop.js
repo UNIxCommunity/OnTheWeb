@@ -3,7 +3,7 @@ var randomScalingFactor = function() {
 };
 
 var config = {
-    type: 'doughnut',
+    type: 'pie',
     data: {
       datasets: [{
         data: [
@@ -117,7 +117,7 @@ $(function () {
           '<tbody>' +
             '{{#websites}}' +
               '<tr>' +
-                '<td>{{site}}</td>'+
+                '<td><b>{{site}}</b></td>'+
                 '<td>{{percent}}</td>' +
                 '<td>{{time}}</td>'+
               '</tr>'+
