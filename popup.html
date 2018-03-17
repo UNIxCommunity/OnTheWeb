@@ -7,6 +7,8 @@
     <script src = "./popup/js/Chart.bundle.min.js"></script>
     <script src = "./popup/js/utils.js"></script>
     <script src = "./popup/js/handlebars.min.js"></script>
+    <script src = "./popup/js/jquery.min.js"></script>
+
     <link rel = "stylesheet" href = "./popup/css/main.css"/>
   </head>
 
@@ -25,6 +27,26 @@
     </div>    
     <div id = "stats" class = "chart-container">     
       <canvas id="chart-area"></canvas>
+      <div style = "display: flex">
+        <button id = "today" class = "btn grey chosen">
+          <span>
+            Today
+          </span>
+        </button>
+        <button id = "week" class = "btn grey">
+          <span>
+            This week
+          </span>        
+        </button>
+        <button id = "month" class = "btn grey">
+          <span>
+            This month
+          </span>          
+        </button>
+      </div>
+
+      <div id = "table" class = "container">        
+      </div>
     </div>
     <div id = "options" class = "hidden">
       <h1>
@@ -32,5 +54,6 @@
       </h1>
     </div>
     <script src = "./popup/js/main_pop.js"></script>
+
   </body>
 </html>
