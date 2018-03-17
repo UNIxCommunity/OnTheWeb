@@ -136,7 +136,5 @@ window.chartColors = {
 		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 		ga('create', 'UA-28909194-3', 'auto');
 		ga('send', 'pageview');
-	}
-	/* eslint-enable */
-
+	}	
 }(this));

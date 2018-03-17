@@ -3,7 +3,7 @@ var randomScalingFactor = function() {
 };
 
 var config = {
-    type: 'pie',
+    type: 'doughnut',
     data: {
       datasets: [{
         data: [
@@ -20,18 +20,24 @@ var config = {
 	  window.chartColors.green,
 	  window.chartColors.blue,
 	],
-	label: 'Dataset 1'
+	label: 'Data'
       }],
       labels: [
-        'Red',
-	'Orange',
-	'Yellow',
-	'Green',
-	'Blue'
+        'Facebook',
+	'VK',
+	'Yandex',
+	'Google',
+	'YouTube'
       ]
     },
     options: {
-      responsive: true
+      //      responsive: true,
+      maintainAspectRatio: true,
+      legend: {
+        display: true,
+        padding: 3,
+        position: 'bottom',
+      }
     }
 };
 
@@ -40,18 +46,10 @@ window.onload = function() {
   window.myPie = new Chart(ctx, config);
 };
 
-document.getElementById('randomizeData').addEventListener('click', function() {
-  config.data.datasets.forEach(function(dataset) {
-    dataset.data = dataset.data.map(function() {
-      return randomScalingFactor();
-    });
-  });
-  window.myPie.update();
-});
-
 var colorNames = Object.keys(window.chartColors);
 
-document.getElementById('addDataset').addEventListener('click', function() {
+/*
+ * document.getElementById('addDataset').addEventListener('click', function() {
   var newDataset = {
     backgroundColor: [],
     data: [],
@@ -68,5 +66,17 @@ document.getElementById('addDataset').addEventListener('click', function() {
   config.data.datasets.push(newDataset);
   window.myPie.update();
 });
+*/
 
 
+/* Events */
+var stat = document.getElementById('stats');
+var options = document.getElementById('options');
+document.getElementById('showStat').addEventListener ('click', function () {
+  options.style.display = 'none';
+  stat.style.display = 'block';
+});
+document.getElementById('showOpt').addEventListener ('click', function () {
+  options.style.display = 'block';
+  stat.style.display = 'none';
+});

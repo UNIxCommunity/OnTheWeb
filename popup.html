@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <title>
@@ -6,14 +7,30 @@
     <script src = "./popup/js/Chart.bundle.min.js"></script>
     <script src = "./popup/js/utils.js"></script>
     <script src = "./popup/js/handlebars.min.js"></script>
+    <link rel = "stylesheet" href = "./popup/css/main.css"/>
   </head>
 
-  <body>
-    <div class="chart-container">
+  <body class = "container">
+     <div style = "display: flex; margin-top: -24px; margin-bottom: -20px">
+      <button class = "btn" id = "showOpt">
+        <span>
+          Options
+        </span>
+      </button>
+      <button class = "btn orange" id = "showStat">
+        <span>
+          Statistics
+        </span>
+      </button>
+    </div>    
+    <div id = "stats" class = "chart-container">     
       <canvas id="chart-area"></canvas>
-      <table>
-      </table>
     </div>
-   <script src = "./popup/js/main_pop.js"></script>
+    <div id = "options" class = "hidden">
+      <h1>
+        hi
+      </h1>
+    </div>
+    <script src = "./popup/js/main_pop.js"></script>
   </body>
 </html>
