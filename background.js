@@ -2,7 +2,9 @@ if (!localStorage.isInitialized) {
   localStorage.isInitialized = true;
   localStorage.setItem('LatestDate', '');
   localStorage.setItem('currentWebsites', '{}');
+  localStorage.setItem('currentHostname','');
   localStorage.setItem('backup','');
+
 }
 
 setInterval(function() {
@@ -24,7 +26,8 @@ setInterval(function() {
         localStorage.setItem(hostname,(seconds+3)); 
     }
 
-//   alert((localStorage.getItem('currentWebsites')));
+   //alert((localStorage.getItem('currentWebsites')));
+   // alert(hostname+' : '+(localStorage.getItem(hostname)));
 
 }, 1000);
 
