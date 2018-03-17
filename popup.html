@@ -7,7 +7,7 @@
     <script src = "./popup/js/Chart.bundle.min.js"></script>
     <script src = "./popup/js/utils.js"></script>
     <script src = "./popup/js/handlebars.min.js"></script>
-    <script src = "./popup/js/jquery.min.js"></script>
+    <script src = "./popup/js/jquery-3.3.1.js"></script>
 
     <link rel = "stylesheet" href = "./popup/css/main.css"/>
   </head>
@@ -48,11 +48,21 @@
       <div id = "table" class = "container">        
       </div>
     </div>
+
     <div id = "options" class = "hidden">
-      <h1>
-        hi
-      </h1>
+      <script type = "text/javascript" src = "options.js"></script>    	
+      <p id = "status"> Empty status </p>	
+      <button id="save">
+        Save
+      </button>		
+      <button id="add">
+        Add
+      </button>
+	
+      <div id = "main">
+      </div>
     </div>
+
     <script src = "./popup/js/main_pop.js"></script>
 
   </body>
