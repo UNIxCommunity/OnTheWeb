@@ -80,3 +80,56 @@ document.getElementById('showOpt').addEventListener ('click', function () {
   options.style.display = 'block';
   stat.style.display = 'none';
 });
+
+var today = document.getElementById('today');
+var week = document.getElementById('week');
+var month = document.getElementById('month');
+
+today.addEventListener ('click', function () {
+  week.classList.remove('chosen');
+  today.classList.add('chosen');
+  month.classList.remove('chosen');  
+});
+week.addEventListener ('click', function () {
+  week.classList.add('chosen');
+  today.classList.remove('chosen');
+  month.classList.remove('chosen');  
+});
+month.addEventListener ('click', function () {
+  week.classList.remove('chosen');
+  today.classList.remove('chosen');
+  month.classList.add('chosen');  
+});
+
+/* Handlebars */
+
+$(function () {
+  var tmp   = $('#table-tmp');
+  var place = $('#table');
+
+  var source   = 
+    '<table>' +
+      '<thead>' +
+        '<th>Site</th>' +
+        '<th>Percentage</th>' +
+        '<th>Time</th>' +
+    '</thead>' +
+          '<tbody>' +
+            '{{#websites}}' +
+              '<tr>' +
+                '<td>{{site}}</td>'+
+                '<td>{{percent}}</td>' +
+                '<td>{{time}}</td>'+
+              '</tr>'+
+            '{{/websites}}'+
+          '</tbody>'+
+        '</table>';
+  var template = Handlebars.compile(source);
+  var data = { websites: [
+      {site: "Facebook.com", percent: "10%", time: "11 min" },
+      {site: "Google.com", percent: "20%", time: "22 min" },
+      {site: "Youtube.com", percent: "70%", time: "1h 17min" }
+    ]};
+
+  place.html (template (data));
+});

@@ -105,9 +105,65 @@ h2 {
   background-color: #c0392b;
 }
 
+.btn.grey {
+  background-color: #E8EAF6;
+  color: black;
+}
+.btn.grey:hover {
+  background-color: #C5CAE9;
+}
+
+.chosen {
+  background-color: #5C6BC0 !important;
+  color: white !important;
+}
+
 .hidden {
   display: none;
 }
 .shown {
   display: block;
 }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+th {
+  text-align: center;
+  color: white !important;
+}
+
+th,
+td {
+  padding: 13px;
+  background-color: rgba(255, 255, 255, 0.2); 
+  color: black;
+}
+
+th {
+  background-color: #AB47BC;
+}
+
+tr:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+td {
+  position: relative;
+}
+
+td:hover:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -9999px;
+  bottom: -9999px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -1;
+}
+
