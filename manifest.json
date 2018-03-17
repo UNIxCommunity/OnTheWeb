@@ -1,0 +1,16 @@
+{
+    "name" : "On The Web" ,
+    "description" : "Keep track of time you spend on Web everyday!",
+    "manifest_version": 2,
+    "version" : "1.0", 
+    "offline_enabled": false,
+    "browser_action": { "default_icon": "img/Icon16.png"},
+    "icons": {
+      "128": "img/Icon128.png",
+      "16": "img/Icon16.png",
+      "48": "img/Icon48.png"
+    },
+    "permissions" : [
+        "tabs", "*://*/*", "<all_urls>", "storage" 
+    ]
+}
